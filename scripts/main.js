@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
     'use strict';
     var App = window.App;
     var Truck = App.Truck;
