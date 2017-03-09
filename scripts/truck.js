@@ -26,6 +26,16 @@
         }.bind(this));
     };
 
+    //same as printOrders but returns the array or orders
+    Truck.prototype.getAllOrders = function() {
+        var customerIdArray = Object.keys(this.db.getAll());
+
+        console.log('Truck #' + this.truckId + ' has pending orders:');
+        customerIdArray.forEach(function() {
+        }.bind(this));
+        return customerIdArray;
+    };
+
     App.Truck = Truck;
     window.App = App;
 
