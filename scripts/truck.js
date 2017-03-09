@@ -26,13 +26,12 @@
         }.bind(this));
     };
 
-    //same as printOrders but returns the array of orders
+    //same as printOrders but returns an array of keys(emails) from each order
     Truck.prototype.getAllOrders = function() {
         var customerIdArray = Object.keys(this.db.getAll());
 
         console.log('Truck #' + this.truckId + ' has pending orders:');
-        customerIdArray.forEach(function() {
-        }.bind(this));
+        customerIdArray.forEach(function() {}.bind(this));
         return customerIdArray;
     };
 

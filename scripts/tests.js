@@ -28,11 +28,20 @@ QUnit.test('DataStore Test', function(assert) {
 //Truck.js needs a method to return the orders
 QUnit.test('Truck Test', function(assert) {
     var myTruck = new App.Truck('007', new App.DataStore());
-    myTruck.createOrder({ emailAddress: 'me@goldfinger.com', coffee: 'double mocha'});
-    myTruck.createOrder({ emailAddress: 'dr@no.com', coffee: 'decaf'});
-    myTruck.createOrder({ emailAddress: 'm@bond.com', coffee: 'earl grey'});
-    assert.deepEqual(myTruck.getAllOrders(),['me@goldfinger.com', 'dr@no.com', 'm@bond.com'], 'Passed, Correct Orders Printed');
+    myTruck.createOrder({
+        emailAddress: 'me@goldfinger.com',
+        coffee: 'double mocha'
+    });
+    myTruck.createOrder({
+        emailAddress: 'dr@no.com',
+        coffee: 'decaf'
+    });
+    myTruck.createOrder({
+        emailAddress: 'm@bond.com',
+        coffee: 'earl grey'
+    });
+    assert.deepEqual(myTruck.getAllOrders(), ['me@goldfinger.com', 'dr@no.com', 'm@bond.com'], 'Passed, Correct Orders Printed');
     myTruck.deliverOrder('dr@no.com');
     myTruck.deliverOrder('m@bond.com');
-    assert.deepEqual(myTruck.getAllOrders(),['me@goldfinger.com'], 'Passed, Correct Orders Removed and Printed');
+    assert.deepEqual(myTruck.getAllOrders(), ['me@goldfinger.com'], 'Passed, Correct Orders Removed and Printed');
 });
