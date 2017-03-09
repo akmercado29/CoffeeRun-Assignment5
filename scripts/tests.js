@@ -25,7 +25,7 @@ QUnit.test('DataStore Test', function(assert) {
 
 //QUnit test was not working propertly for the code in Figure 8.32 at first
 //because the createOrder() function is only printing orders, not returning them
-//Truck.js need a method to return the orders
+//Truck.js needs a method to return the orders
 QUnit.test('Truck Test', function(assert) {
     var myTruck = new App.Truck('007', new App.DataStore());
     myTruck.createOrder({ emailAddress: 'me@goldfinger.com', coffee: 'double mocha'});

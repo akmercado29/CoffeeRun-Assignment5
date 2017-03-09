@@ -26,7 +26,7 @@
         }.bind(this));
     };
 
-    //same as printOrders but returns the array or orders
+    //same as printOrders but returns the array of orders
     Truck.prototype.getAllOrders = function() {
         var customerIdArray = Object.keys(this.db.getAll());
 
